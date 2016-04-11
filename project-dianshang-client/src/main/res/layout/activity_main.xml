@@ -1,17 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.qh.project_dianshang_client.MainActivity">
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"></LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <com.dxjia.library.ImageTextButton
+            xmlns:view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            view:itb_icon_size="@dimen/activity_tabbed_icon_width"
+            view:itb_icon_position="top"
+            view:itb_bg="@color/tabbedIconBackground"
+            view:itb_text_color="@color/tabbedTextColor"
+            view:itb_bg_pressed="@color/tabbedIconBackground"
+            view:itb_text="首页"
+            view:itb_icon="@drawable/btn_index"/>
+        <com.dxjia.library.ImageTextButton
+            xmlns:view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_classify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            view:itb_icon_size="@dimen/activity_tabbed_icon_width"
+            view:itb_icon_position="top"
+            view:itb_text="分类"
+            view:itb_text_color="@color/tabbedTextColor"
+            view:itb_bg="@color/tabbedIconBackground"
+            view:itb_bg_pressed="@color/tabbedIconBackground"
+            view:itb_icon="@drawable/btn_classify"/>
+
+        <com.dxjia.library.ImageTextButton
+            xmlns:view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            view:itb_icon_size="@dimen/activity_tabbed_icon_width"
+            view:itb_icon_position="top"
+            view:itb_text="发现"
+            view:itb_text_color="@color/tabbedTextColor"
+            view:itb_bg="@color/tabbedIconBackground"
+            view:itb_bg_pressed="@color/tabbedIconBackground"
+            view:itb_icon="@drawable/btn_discover"/>
+
+        <com.dxjia.library.ImageTextButton
+            xmlns:view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_mine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            view:itb_icon_size="@dimen/activity_tabbed_icon_width"
+            android:layout_weight="1"
+            view:itb_icon_position="top"
+            view:itb_text="我的"
+            view:itb_text_color="@color/tabbedTextColor"
+            view:itb_bg="@color/tabbedIconBackground"
+            view:itb_bg_pressed="@color/tabbedIconBackground"
+            view:itb_icon="@drawable/btn_mine"/>
+
+    </LinearLayout>
+
+</LinearLayout>

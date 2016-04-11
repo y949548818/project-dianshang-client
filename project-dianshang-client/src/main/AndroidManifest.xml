@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qh.project_dianshang_client">
+    package="com.qh.project_dianshang_client"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
+    <uses-sdk tools:overrideLibrary="com.dxjia.library" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
