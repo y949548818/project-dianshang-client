@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn_mine=(ImageTextButton) findViewById(R.id.btn_mine);
         btn_discover=(ImageTextButton) findViewById(R.id.btn_discover);
         btn_index=(ImageTextButton) findViewById(R.id.btn_index);
-
+        viewPager=(ViewPager)findViewById(R.id.viewpager);
     }
 
     /**
