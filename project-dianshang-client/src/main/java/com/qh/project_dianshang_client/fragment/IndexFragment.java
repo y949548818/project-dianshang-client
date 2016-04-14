@@ -4,11 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.qh.project_dianshang_client.R;
+import com.qh.project_dianshang_client.adapter.IndexListAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,12 +63,19 @@ public class IndexFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    RecyclerView recyclerView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_index, container, false);
+        View view=inflater.inflate(R.layout.fragment_index, container, false);
+        recyclerView =(RecyclerView) view.findViewById(R.id.recycler);
+        RecyclerView.LayoutManager layoutManager=new GridLayoutManager(getContext(),5);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(new IndexListAdapter(getContext()));
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -78,12 +88,12 @@ public class IndexFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
